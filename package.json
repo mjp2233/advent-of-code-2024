@@ -1,0 +1,17 @@
+{
+  "name": "advent-of-code-2024",
+  "version": "1.0.0",
+  "description": "Advent of Code Challenges for 2024 - https://adventofcode.com/2024",
+  "main": "index.js",
+  "keywords": [],
+  "author": "mjp2233",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "bun run index.ts"
+  }
+}
