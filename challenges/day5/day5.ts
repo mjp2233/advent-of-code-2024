@@ -8,7 +8,7 @@ get the final answer.
 */
 import { readFileSync } from 'fs';
 
-function orderOrganizer() : Number {
+export function orderOrganizer() : Number {
     var summation: number = 0;
     
     var input = readInput();
@@ -40,7 +40,7 @@ function orderOrganizer() : Number {
 }
 
 
-function checkRulePasses(update: Number[], rule: Number[]) : Boolean {
+export function checkRulePasses(update: Number[], rule: Number[]) : Boolean {
    if(update.indexOf(rule[0]) == -1 || update.indexOf(rule[1]) == -1 || update.indexOf(rule[0]) < update.indexOf(rule[1])) {
         return true;
     } 
@@ -48,7 +48,7 @@ function checkRulePasses(update: Number[], rule: Number[]) : Boolean {
     return false;
 }
 
-function readInput() {
+export function readInput() {
     const fileContent = readFileSync('./input/day5Input.txt', 'utf-8');
 
     const lines = fileContent.trim().split(/\r\s*\r/);
@@ -67,7 +67,7 @@ function readInput() {
     value from only the Updates that were
     reorder.
 */ 
-function orderOrganizerTwo() : Number {
+export function orderOrganizerTwo() : Number {
     var summation: number = 0;
     
     var input = readInput();
@@ -110,7 +110,7 @@ function checkRules(rules: Number[][], update: Number[]) : Boolean {
 
 //Swap the two values in the updates list
 //Used when rule isn't met
-function reorderUpdates(update: Number[], rule: Number[]) {
+export function reorderUpdates(update: Number[], rule: Number[]) {
     const index1 = update.indexOf(rule[0]);
     const index2 = update.indexOf(rule[1]);   
     [update[index1], update[index2]] = [update[index2], update[index1]];
