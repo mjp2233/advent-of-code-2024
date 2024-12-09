@@ -1,11 +1,9 @@
-import { readFileSync } from 'fs';
+import { readLines } from '../helpers';
 
-function calculateTotalDistanceFromFile(filePath: string): number {
+export function calculateTotalDistanceFromFile(filePath: string): number {
   // Read the file and split lines
 
-
-    const fileContent = readFileSync(filePath, 'utf-8');
-  const lines = fileContent.trim().split(/\r?\n/);
+ const lines = readLines(filePath);
 
   // Initialize arrays for left and right lists
   const leftList: number[] = [];
@@ -39,12 +37,9 @@ console.log('Total Distance:', totalDistance);
 
 // ------ Part two ----------
 
-function calculateSimilarity(filePath: string): number {
+export function calculateSimilarity(filePath: string): number {
     // Read the file and split lines
-  
-  
-      const fileContent = readFileSync(filePath, 'utf-8');
-    const lines = fileContent.trim().split(/\r?\n/);
+    const lines = readLines(filePath);
   
     // Initialize arrays for left and right lists
     const leftList: number[] = [];
