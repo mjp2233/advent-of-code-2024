@@ -70,7 +70,7 @@ function countWordOccurrences(grid: string[][], word: string): number {
 
   function loadGridFromFile(): string[][] {
     // Read the file content and split it into lines
-    const fileContent = readFileSync('./challenges/day4/day4Input.txt', 'utf-8');
+    const fileContent = readFileSync('./input/day4Input.txt', 'utf-8');
 
     const lines = fileContent.trim().split(/\r?\n/);
   
@@ -149,3 +149,8 @@ function countXmasOccurrences(grid: string[][]): number {
   const xmas = countXmasOccurrences(loadGridFromFile());
   console.log(`The word '${word}' appears ${xmas} times.`);
   
+
+
+    //Answers
+    //The word 'XMAS' appears 2573 times.
+    //The word 'XMAS' appears 1850 times.

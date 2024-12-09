@@ -33,7 +33,7 @@ function calculateTotalDistanceFromFile(filePath: string): number {
 
 // Example Usage
 const filePath = './input.txt'; // Replace with your file path
-const filePathArg = process.argv.at(2) ?? './challenges/day1/day1Input.txt'; // Skip the first two default arguments
+const filePathArg = process.argv.at(2) ?? './input/day1Input.txt'; // Skip the first two default arguments
 let totalDistance = calculateTotalDistanceFromFile(filePathArg);
 console.log('Total Distance:', totalDistance);
 
@@ -70,6 +70,6 @@ function calculateSimilarity(filePath: string): number {
   let similarity = calculateSimilarity(filePathArg);
   console.log('Similarity:', similarity);
   
-// ~~~~~~~ Answers (for current input
+// ~~~~~~~ Answers
 //Total Distance: 1970720
 //Similarity: 17191599

@@ -49,7 +49,7 @@ function checkRulePasses(update: Number[], rule: Number[]) : Boolean {
 }
 
 function readInput() {
-    const fileContent = readFileSync('./challenges/day5/day5Input.txt', 'utf-8');
+    const fileContent = readFileSync('./input/day5Input.txt', 'utf-8');
 
     const lines = fileContent.trim().split(/\r\s*\r/);
     
@@ -58,8 +58,6 @@ function readInput() {
 }
 //Run the file
 //console.log(orderOrganizer());
-
-
 //Answer = 4957
 
 //~~~~~~~~~~~~~~ Part 2 ~~~~~~~~~~~~~~
