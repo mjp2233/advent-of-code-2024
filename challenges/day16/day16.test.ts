@@ -62,6 +62,7 @@ describe('findBestPath', () => {
     const result = findBestPath(grid, 1, 1);
     expect(result).toBe(3); // 3 steps forward
   });
+  
   it('handles a simple turning path', () => {
     const grid = [
       '#####',
@@ -74,6 +75,7 @@ describe('findBestPath', () => {
     const result = findBestPath(grid, 3, 1);
     expect(result).toBe(2006); // 3 steps forward
   });
+
   it('handles a simple reversed turning path', () => {
     const grid = [
       '#####',

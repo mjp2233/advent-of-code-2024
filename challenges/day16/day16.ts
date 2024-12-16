@@ -1,7 +1,11 @@
 import {readLines} from '../helpers'
 
+/*
+The Reindeer start on the Start Tile (marked S) facing East and need to reach the End Tile (marked E). 
+They can move forward one tile at a time (increasing their score by 1 point), but never into a wall (#).
+They can also rotate clockwise or counterclockwise 90 degrees at a time (increasing their score by 1000 points).
+*/
 var STARTING_POSITION = [0,0];
-var TOTAL_SCORE = 0;
 
 export function parseInput(): string[][] {
 
@@ -21,19 +25,12 @@ export function parseInput(): string[][] {
     
 }
 
-const EAST = 0;
-const SOUTH = 1;
-const WEST = 2;
-const NORTH = 3;
-
-
 const directions = [
     [0,1], //Right - East
     [1,0], //Down - South
     [0,-1], //Left - West
     [-1,0] //Up - North
 ]
-
 
 export function findBestPath(grid: string[][], startRow: number, startCol: number): number {
 
@@ -101,7 +98,6 @@ export function findBestPath(grid: string[][], startRow: number, startCol: numbe
     return Infinity;
   }
 
-
 const grid: string[][] = parseInput();
 const visited = new Set<string>();
 const bestScore = findBestPath(
@@ -109,5 +105,5 @@ const bestScore = findBestPath(
     STARTING_POSITION[0],
     STARTING_POSITION[1]
 );
-
+//Print Answer
 console.log(`Best Score: ${bestScore}`);
